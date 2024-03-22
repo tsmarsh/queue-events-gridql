@@ -1,0 +1,36 @@
+{
+  "name": "@gridql/db-events",
+  "version": "3.2.2",
+  "description": "Pulls data from mongo and puts it in a kafka topic",
+  "main": "index.js",
+  "type": "module",
+  "author": "Tom Marsh",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "test": "nyc mocha --exit",
+    "format": "prettier --write index.js \"test/**/*.{js,jsx,mjs}\"",
+    "lint": "eslint index.js \"test/**/*.{js,jsx,mjs}\""
+  },
+  "dependencies": {
+    "log4js": "^6.9.1",
+    "@gridql/kafka-event-consumer": "^3.8.4",
+    "openapi-client-axios": "^7.5.4",
+    "axios": "^1.6.8",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@gridql/mongo-connector": "^3.8.1",
+    "@gridql/payload-generator": "^3.8.4",
+    "@gridql/kafka-consumer": "^3.8.4",
+    "eslint": "*",
+    "husky": "*",
+    "kafkajs": "*",
+    "mocha": "*",
+    "mongodb-memory-server": "*",
+    "nyc": "*",
+    "prettier": "*",
+    "testcontainers": "*"
+  }
+}
